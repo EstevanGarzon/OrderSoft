@@ -4,116 +4,124 @@
 
 @ViewBag.Message
 
+    <br />
     <div class="row">
         <div class="col-sm-4">
-            <div class="card">
-                <div class="card-header">
+            <div class="panel panel-default">
+                <div class="panel-heading">
                     <b>Mesa: </b>
                 </div>
-                <div class="card-body">
+                <div class="panel-body">
                     <!--<div class="input-group mb-3">-->
-                    <button name="mesa" type="button" class="btn btn-outline-danger">M1</button>
-                    <button name="mesa" type="button" class="btn btn-outline-primary">M2</button>
-                    <button name="mesa" type="button" class="btn btn-outline-primary">M3</button>
-                    <button name="mesa" type="button" class="btn btn-outline-primary">M4</button>
-                    <button name="mesa" type="button" class="btn btn-outline-primary">M5</button>
-                    <button name="mesa" type="button" class="btn btn-outline-primary">M6</button>
-                    <button name="mesa" type="button" class="btn btn-outline-primary">M7</button>
-                    <button name="mesa" type="button" class="btn btn-outline-primary">M8</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M1</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M2</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M3</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M4</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M5</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M6</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M7</button>
+                    <button name="mesa" type="button" class="btn btn-primary">M8</button>
                     <!--</div>-->
                 </div>
             </div>
             <br>
-            <div class="card">
-                <form action="#" method="post" name="addAdicional" id="addAdicional">
-                    <div class="card-header">
-                        <b>Adicionales</b>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <center><b>Adicionales</b></center>
+                </div>
+                <div class="panel-body">
+                    <input type="text" class="form-control" name="mesa" hidden />
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="tajadas" name="tajadas">
+                        <label class="custom-control-label" for="tajadas">
+                            Tajadas (1)
+                        </label>
                     </div>
-                    <div class="card-body">
-                        <input type="text" class="form-control" name="mesa" hidden />
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="tajadas" name="tajadas">
-                            <label class="custom-control-label" for="tajadas">
-                                Tajadas (1)
-                            </label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="papas" name="papas">
-                            <label class="custom-control-label" for="papas">Tajadas</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="maiz" name="maiz">
-                            <label class="custom-control-label" for="maiz">Tajadas</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="fritas" name="fritas">
-                            <label class="custom-control-label" for="fritas">Tajadas</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="albondigas" name="albondigas">
-                            <label class="custom-control-label" for="albondigas">Tajadas</label>
-                        </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="papas" name="papas">
+                        <label class="custom-control-label" for="papas">Tajadas</label>
                     </div>
-                    <div class="card-footer">
-                        <button type="button" name="addFactura" class="btn btn-outline-primary">Agregar a factura</button>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="maiz" name="maiz">
+                        <label class="custom-control-label" for="maiz">Tajadas</label>
                     </div>
-                </form>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="fritas" name="fritas">
+                        <label class="custom-control-label" for="fritas">Tajadas</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="albondigas" name="albondigas">
+                        <label class="custom-control-label" for="albondigas">Tajadas</label>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <center>
+                        <button type="button" name="addFactura" class="btn btn-primary">Agregar a factura</button>
+                    </center>
+                </div>
             </div>
         </div>
         <div class="col-sm-8">
             <div class="card">
-                <button type="button" name="addPlato" class="btn btn-outline-primary">Adicionar plato</button>
+                <button type="button" name="addPlato" class="btn btn-primary" style="width: 100%;">
+                    Adicionar plato
+                </button>
             </div>
             <br>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">Corriente</li>
+                <li role="presentation" class="">Carta</li>
+                <li role="presentation" class="">Especiales</li>
+            </ul>
+
             <ul class="list-group">
-                <input type="text" class="form-control" name="mesa" hidden />
                 <li class="list-group-item" data-toggle="collapse" data-target="#plato1">Plato 1</li>
-                <div id="plato1" class="collapse card">
+                <div id="plato1" class="collapse panel">
                     <div class="btn-group btn-group-sm">
-                        <button type="button" name="p1entrada" class="btn btn-outline-primary">Sopa</button>
-                        <button type="button" name="p1entrada" class="btn btn-outline-primary">Fruta</button>
-                        <button type="button" name="p1entrada" class="btn btn-outline-primary">Huevo</button>
+                        <button type="button" name="p1entrada" class="btn btn-primary">Sopa</button>
+                        <button type="button" name="p1entrada" class="btn btn-primary">Fruta</button>
+                        <button type="button" name="p1entrada" class="btn btn-primary">Huevo</button>
                     </div>
                     <br>
                     <div class="btn-group btn-group-sm">
-                        <button type="button" name="p1principio" class="btn btn-outline-success">Lenteja</button>
-                        <button type="button" name="p1principio" class="btn btn-outline-success">Frijol rojo</button>
-                        <button type="button" name="p1principio" class="btn btn-outline-success">Frijol negro</button>
+                        <button type="button" name="p1principio" class="btn btn-success">Lenteja</button>
+                        <button type="button" name="p1principio" class="btn btn-success">Frijol rojo</button>
+                        <button type="button" name="p1principio" class="btn btn-success">Frijol negro</button>
                     </div>
                     <br>
                     <div class="btn-group btn-group-sm">
-                        <button type="button" name="p1otros" class="btn btn-outline-secondary active">Arroz </button>
-                        <button type="button" name="p1otros" class="btn btn-outline-secondary active">Ensalada </button>
-                        <button type="button" name="p1otros" class="btn btn-outline-secondary active">Platano </button>
-                        <button type="button" name="p1otros" class="btn btn-outline-secondary">Arroz </button>
+                        <button type="button" name="p1otros" class="btn btn-secondary active">Arroz </button>
+                        <button type="button" name="p1otros" class="btn btn-secondary active">Ensalada </button>
+                        <button type="button" name="p1otros" class="btn btn-secondary active">Platano </button>
+                        <button type="button" name="p1otros" class="btn btn-secondary">Arroz </button>
                     </div>
                 </div>
                 <li class="list-group-item" data-toggle="collapse" data-target="#plato2">Plato 2</li>
-                <div id="plato2" class="collapse card">
+                <div id="plato2" class="collapse panel">
                     <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-outline-primary">Sopa</button>
-                        <button type="button" class="btn btn-outline-primary">Fruta</button>
-                        <button type="button" class="btn btn-outline-primary">Huevo</button>
+                        <button type="button" class="btn btn-primary">Sopa</button>
+                        <button type="button" class="btn btn-primary">Fruta</button>
+                        <button type="button" class="btn btn-primary">Huevo</button>
                     </div>
                     <br>
                     <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-outline-success">Lenteja</button>
-                        <button type="button" class="btn btn-outline-success">Frijol rojo</button>
-                        <button type="button" class="btn btn-outline-success">Frijol negro</button>
+                        <button type="button" class="btn btn-success">Lenteja</button>
+                        <button type="button" class="btn btn-success">Frijol rojo</button>
+                        <button type="button" class="btn btn-success">Frijol negro</button>
                     </div>
                 </div>
                 <li class="list-group-item" data-toggle="collapse" data-target="#plato3">Plato 3</li>
-                <div id="plato3" class="collapse card">
+                <div id="plato3" class="collapse panel">
                     <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-outline-primary">Sopa</button>
-                        <button type="button" class="btn btn-outline-primary">Fruta</button>
-                        <button type="button" class="btn btn-outline-primary">Huevo</button>
+                        <button type="button" class="btn btn-primary">Sopa</button>
+                        <button type="button" class="btn btn-primary">Fruta</button>
+                        <button type="button" class="btn btn-primary">Huevo</button>
                     </div>
                     <br>
                     <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-outline-success">Lenteja</button>
-                        <button type="button" class="btn btn-outline-success">Frijol rojo</button>
-                        <button type="button" class="btn btn-outline-success">Frijol negro</button>
+                        <button type="button" class="btn btn-success">Lenteja</button>
+                        <button type="button" class="btn btn-success">Frijol rojo</button>
+                        <button type="button" class="btn btn-success">Frijol negro</button>
                     </div>
                 </div>
             </ul>
@@ -122,10 +130,10 @@
             <div class="card">
                 <div class="row">
                     <div class="col-sm-6">
-                        <button type="button" name="guardar" class="btn btn-block btn-outline-secondary">Guardar</button>
+                        <button type="button" name="guardar" class="btn btn-block btn-primary">Guardar</button>
                     </div>
                     <div class="col-sm-6">
-                        <button type="button" name="pagar" class="btn btn-block btn-outline-primary">Pagar</button>
+                        <button type="button" name="pagar" class="btn btn-block btn-primary">Pagar</button>
                     </div>
                 </div>
             </div>
