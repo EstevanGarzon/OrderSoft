@@ -1,4 +1,6 @@
-﻿@{
+﻿@model OrderSoftV0.Models.Index
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -13,28 +15,35 @@
                     </center>
                 </div>
                 <div class="panel-body">
-                    <form id="formLogin" action="~/Views/Content/Menu.cshtml" method="post">
+                    <!--<form id="formLogin" action="/HomeController/Index" method="post">-->
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post)) { 
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="user">Usuario:</label>
-                                <input type="text" id="user" class="form-control" />
+                                @Html.TextBoxFor(Model => Model.user, "", new { @class = "form-control"})
+                                @Html.ValidationMessageFor(Model => Model.user)
+                                <!--<input type="text" id="user" class="form-control" />-->
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <label for="psw">Contraseña:</label>
-                                <input type="password" id="psw" class="form-control" />
+                                @Html.TextBoxFor(Model => Model.password, "", new { @class = "form-control" })
+                                @Html.ValidationMessageFor(Model => Model.password)
+                                <!--<input type="password" id="psw" class="form-control" />-->
                             </div>
                         </div>
                         <br />
                         <div class="row">
                             <div class="col-md-12">
                                 <center>
-                                    <button id="Login" class="btn btn-lg btn-primary"> Entrar</button>
+                                    <input type="submit" id="Login" class="btn btn-lg btn-primary" value="Entrar"/>
+                                    <!--<button form="formLogin" id="Login" class="btn btn-lg btn-primary"> Entrar</button>-->
                                 </center>
                             </div>
                         </div>
-                    </form>
+                    }
+                    <!--</form>--->
                 </div>
             </div>
         </div>
