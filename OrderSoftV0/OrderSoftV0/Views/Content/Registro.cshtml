@@ -1,0 +1,50 @@
+﻿@model OrderSoftV0.Models.Registro
+
+@{
+    ViewBag.Title = "Menu";
+}
+
+@ViewBag.Message
+
+<br />
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>
+                    <center>Registro de usuarios</center>
+                </b>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nombre1">Primer nombre:<span style="color:red;">*</span></label>
+                        @Html.TextBoxFor(Model => Model.nombre1, "", new { @class = "form-control" })
+
+                        <label for="apellido1">Primer apellido:<span style="color:red;">*</span></label>
+                        @Html.TextBoxFor(Model => Model.apellido1, "", new { @class = "form-control" })
+
+                        <label for="cedula">Cedula:<span style="color:red;">*</span></label>
+                        @Html.TextBoxFor(Model => Model.cedula, "", new { @class = "form-control" })
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nombre2">Segundo nombre:</label>
+                        @Html.TextBoxFor(Model => Model.nombre2, "", new { @class = "form-control" })
+
+                        <label for="apellido2">Segundo apellido:</label>
+                        @Html.TextBoxFor(Model => Model.apellido2, "", new { @class = "form-control" })
+
+                        <label for="ciudad">Ciudad:</label>
+                        @Html.TextBoxFor(Model => Model.ciudad, "", new { @class = "form-control" })
+                    </div>
+                </div>
+                <br />
+                <center>
+                    <input type="submit" id="Login" class="btn btn-lg btn-primary" value="Entrar" />
+                </center>                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

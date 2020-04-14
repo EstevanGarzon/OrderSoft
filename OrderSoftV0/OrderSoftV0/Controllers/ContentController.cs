@@ -14,5 +14,17 @@ namespace OrderSoftV0.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Registro()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Registro(Registro r)
+        {
+            return View();
+        }
     }
+
 }
