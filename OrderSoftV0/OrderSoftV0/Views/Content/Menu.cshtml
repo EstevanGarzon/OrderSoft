@@ -1,142 +1,198 @@
 ﻿@{
     ViewBag.Title = "Menu";
 }
-
 @ViewBag.Message
 
-    <br />
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <b>Mesa: </b>
-                </div>
-                <div class="panel-body">
-                    <!--<div class="input-group mb-3">-->
-                    <button name="mesa" type="button" class="btn btn-primary">M1</button>
-                    <button name="mesa" type="button" class="btn btn-primary">M2</button>
-                    <button name="mesa" type="button" class="btn btn-primary">M3</button>
-                    <button name="mesa" type="button" class="btn btn-primary">M4</button>
-                    <button name="mesa" type="button" class="btn btn-primary">M5</button>
-                    <button name="mesa" type="button" class="btn btn-primary">M6</button>
-                    <button name="mesa" type="button" class="btn btn-primary">M7</button>
-                    <button name="mesa" type="button" class="btn btn-primary">M8</button>
-                    <!--</div>-->
-                </div>
+<br />
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <b>Mesa: </b>
             </div>
-            <br>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <center><b>Adicionales</b></center>
-                </div>
-                <div class="panel-body">
-                    <input type="text" class="form-control" name="mesa" hidden />
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="tajadas" name="tajadas">
-                        <label class="custom-control-label" for="tajadas">
-                            Tajadas (1)
-                        </label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="papas" name="papas">
-                        <label class="custom-control-label" for="papas">Tajadas</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="maiz" name="maiz">
-                        <label class="custom-control-label" for="maiz">Tajadas</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="fritas" name="fritas">
-                        <label class="custom-control-label" for="fritas">Tajadas</label>
-                    </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="albondigas" name="albondigas">
-                        <label class="custom-control-label" for="albondigas">Tajadas</label>
-                    </div>
-                </div>
-                <div class="panel-footer">
-                    <center>
-                        <button type="button" name="addFactura" class="btn btn-primary">Agregar a factura</button>
-                    </center>
-                </div>
+            <div class="panel-body">
+                <!--<div class="input-group mb-3">-->
+                <button name="mesa" type="button" class="btn btn-primary">M1</button>
+                <button name="mesa" type="button" class="btn btn-primary">M2</button>
+                <button name="mesa" type="button" class="btn btn-primary">M3</button>
+                <button name="mesa" type="button" class="btn btn-primary">M4</button>
+                <button name="mesa" type="button" class="btn btn-primary">M5</button>
+                <button name="mesa" type="button" class="btn btn-primary">M6</button>
+                <button name="mesa" type="button" class="btn btn-primary">M7</button>
+                <button name="mesa" type="button" class="btn btn-primary">M8</button>
+                <!--</div>-->
             </div>
         </div>
-        <div class="col-sm-8">
-            <div class="card">
-                <button type="button" name="addPlato" class="btn btn-primary" style="width: 100%;">
-                    Adicionar plato
-                </button>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <center><b>Adicionales</b></center>
             </div>
-            <br>
-            <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active">Corriente</li>
-                <li role="presentation" class="">Carta</li>
-                <li role="presentation" class="">Especiales</li>
-            </ul>
-
-            <ul class="list-group">
-                <li class="list-group-item" data-toggle="collapse" data-target="#plato1">Plato 1</li>
-                <div id="plato1" class="collapse panel">
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" name="p1entrada" class="btn btn-primary">Sopa</button>
-                        <button type="button" name="p1entrada" class="btn btn-primary">Fruta</button>
-                        <button type="button" name="p1entrada" class="btn btn-primary">Huevo</button>
-                    </div>
-                    <br>
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" name="p1principio" class="btn btn-success">Lenteja</button>
-                        <button type="button" name="p1principio" class="btn btn-success">Frijol rojo</button>
-                        <button type="button" name="p1principio" class="btn btn-success">Frijol negro</button>
-                    </div>
-                    <br>
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" name="p1otros" class="btn btn-secondary active">Arroz </button>
-                        <button type="button" name="p1otros" class="btn btn-secondary active">Ensalada </button>
-                        <button type="button" name="p1otros" class="btn btn-secondary active">Platano </button>
-                        <button type="button" name="p1otros" class="btn btn-secondary">Arroz </button>
-                    </div>
+            <div class="panel-body">
+                <input type="text" class="form-control" name="mesa" hidden />
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="tajadas" name="tajadas">
+                    <label class="custom-control-label" for="tajadas">
+                        Tajadas (1)
+                    </label>
                 </div>
-                <li class="list-group-item" data-toggle="collapse" data-target="#plato2">Plato 2</li>
-                <div id="plato2" class="collapse panel">
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-primary">Sopa</button>
-                        <button type="button" class="btn btn-primary">Fruta</button>
-                        <button type="button" class="btn btn-primary">Huevo</button>
-                    </div>
-                    <br>
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-success">Lenteja</button>
-                        <button type="button" class="btn btn-success">Frijol rojo</button>
-                        <button type="button" class="btn btn-success">Frijol negro</button>
-                    </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="papas" name="papas">
+                    <label class="custom-control-label" for="papas">Tajadas</label>
                 </div>
-                <li class="list-group-item" data-toggle="collapse" data-target="#plato3">Plato 3</li>
-                <div id="plato3" class="collapse panel">
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-primary">Sopa</button>
-                        <button type="button" class="btn btn-primary">Fruta</button>
-                        <button type="button" class="btn btn-primary">Huevo</button>
-                    </div>
-                    <br>
-                    <div class="btn-group btn-group-sm">
-                        <button type="button" class="btn btn-success">Lenteja</button>
-                        <button type="button" class="btn btn-success">Frijol rojo</button>
-                        <button type="button" class="btn btn-success">Frijol negro</button>
-                    </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="maiz" name="maiz">
+                    <label class="custom-control-label" for="maiz">Tajadas</label>
                 </div>
-            </ul>
-
-            <br>
-            <div class="card">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <button type="button" name="guardar" class="btn btn-block btn-primary">Guardar</button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="button" name="pagar" class="btn btn-block btn-primary">Pagar</button>
-                    </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="fritas" name="fritas">
+                    <label class="custom-control-label" for="fritas">Tajadas</label>
                 </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="albondigas" name="albondigas">
+                    <label class="custom-control-label" for="albondigas">Tajadas</label>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <center>
+                    <button type="button" name="addFactura" class="btn btn-primary">Agregar a factura</button>
+                </center>
             </div>
         </div>
-
     </div>
+    <div class="col-sm-8">
+        <div class="card">
+            <button type="button" name="addPlato" class="btn btn-primary" style="width: 100%;">
+                Adicionar plato
+            </button>
+        </div>
+        <br>
+
+
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"></li>
+            <li role="presentation" class=""></li>
+            <li role="presentation" class="">Especiales</li>
+        </ul>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#menu0">Corriente</a></li>
+            <li><a data-toggle="tab" href="#menu1">Carta</a></li>
+            <li><a data-toggle="tab" href="#menu2">Especiales</a></li>
+            <li><a data-toggle="tab" href="#menu3">Bebidas</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="menu0" class="tab-pane fade in active">
+                <h3>Platos corriente</h3>
+                <div class="col-md-10">
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida0" value="8000">
+                        <label class="custom-control-label" for="Comida0" id="LabelComida0">Sopa de arroz con pollo y cilantro - $ 8000 </label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida1" value="9000">
+                        <label class="custom-control-label" for="Comida1" id="LabelComida1">Bistec encebollado - $ 9.000 </label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida2" value="9000">
+                        <label class="custom-control-label" for="Comida2" id="LabelComida2">Tamal valluno con hogao - $ 9.000</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu1" class="tab-pane fade">
+                <h3>Carta</h3>
+                <p>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida3" value="16500">
+                        <label class="custom-control-label" for="Comida3" id="LabelComida3">Bandeja paisa - $16.500</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida4" value="12000">
+                        <label class="custom-control-label" for="Comida4" id="LabelComida4">Arroz con pollo $ 12.000</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida5" value="16000">
+                        <label class="custom-control-label" for="Comida5" id="LabelComida5">Carne asada 12 OZ - $ 16.000</label>
+                    </div>
+
+                </p>
+            </div>
+
+            <div id="menu2" class="tab-pane fade">
+                <h3>Especiales</h3>
+                <p>
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida6" value="18000">
+                        <label class="custom-control-label" for="Comida6" id="LabelComida6">Fajitas de carne asada - $ 16.000</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input c" id="Comida7" value="20000">
+                        <label class="custom-control-label" for="Comida7" id="LabelComida7">Camarrones- $ 20.000</label>
+                    </div>
+                </p>
+            </div>
+
+            <div id="menu3" class="tab-pane fade">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input c" id="Comida8" value="2000">
+                    <label class="custom-control-label" for="Comida8" id="LabelComida8">Limonada- $ 2.000</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input c" id="Comida9" value="2000">
+                    <label class="custom-control-label" for="Comida9" id="LabelComida9">Coca-cola - $ 2.000</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <button id="btnPlato" class="btn btn-success">Agregar nuevo plato</button>
+        </div>
+
+
+        <div class="row">
+            <h4>Lista de platos</h4>
+            <ul class="list-group" id="listaPlatos"></ul>
+        </div>
+
+
+
+        <div id="clonPlato" style="display:none;">
+            <li class="list-group-item cabecera" data-toggle="collapse" data-target="">
+
+            </li>
+            <div class="collapse panel body">
+                <div class="col-md-10">
+                    <table class="table table-hover">
+                        <thead>
+                        <th>Plato</th>
+                        <th>Valor</th>
+                        </thead>
+                        <tbody id="ContenidoPlato"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <br>
+        <div class="card">
+            <div class="row">
+                <div class="col-sm-6">
+                    <button type="button" id="ordenar" class="btn btn-block btn-primary" disabled>Ordenar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/MenuCliente") 
