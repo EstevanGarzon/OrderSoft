@@ -2,50 +2,17 @@
     console.log(":v v1");
     cc = 0;
     arrayPlatos = [];
-
-    $("#btnPlato").click(function () {
-        html = "";
-        subTotal = 0;
-        arrayComida = [];
-        //Ingeniero que no es pirata es por que tiene plata :v 
-        console.log("Click"); 
-        var lisC = $(".c");
-        for (var i = 0; i < lisC.length; i++) {
-            if ($(lisC[i]).is(":checked")) { 
-                html += "<tr>"+
-                            "<td>" + $("#LabelComida" + i).html()+"</td >"+
-                            "<td> $ " + $("#Comida" + i).val()+"</td > "+
-                         "</tr > "; 
-                arrayComida.push({
-                    "idLisc":i, 
-                    "nombre": $("#LabelComida"+i).html(),
-                    "precio": $("#Comida"+i).val()
-                });
-                subTotal = subTotal + parseInt($("#Comida" + i).val());
-            }
-        }
-
-
-        html += "<tr>" +
-            "<td>Sub total </td >" +
-            "<td> $ " + subTotal+ "</td > " +
-            "</tr > "; 
-
-        arrayPlatos.push(arrayComida);
-        var clon = $("#clonPlato").clone();
-        clon.find(".cabecera").attr('id', "CabeceraPlato" + cc);
-        clon.find(".cabecera").html("Plato n " + parseInt(cc+1));
-        clon.find(".cabecera").attr('data-target', "#Plato" + cc);
-        clon.find(".body").attr('id', "Plato" + cc);
-        clon.find(".btnModifica").attr('id',cc);
-        clon.find("#ContenidoPlato").html(html);
-
-        console.log(clon);
-        clon.children().appendTo($("#listaPlatos"));
-        console.log(arrayPlatos);
-        cc++; 
-        $(".c").prop("checked", false); 
-        $("#ordenar").prop("disabled",false)
+    $(document).on('click', '.e', function (e) { 
+        $("#trC"+$(this).attr('id')).remove();
     });
-
+    $(document).on('click', '.c', function (e) {
+        console.log("Click"); 
+        cc++;
+        $("#ContenidoPlato").append("<tr id='trC"+cc+"'>" +
+            "<td>" + $("#t" + $(this).attr("id")).html() + "</td >" +
+            "<td> $ " + $(this).val() + "</td > " +
+            "<td><button class='btn btn-danger e' id='"+cc+"'>Eliminar</button></td>"+
+            "</tr > ");
+        $("#ordenar").prop("disabled", false);
+    });
 });

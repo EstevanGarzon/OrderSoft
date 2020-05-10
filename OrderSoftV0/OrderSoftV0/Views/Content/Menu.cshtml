@@ -58,14 +58,8 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-8">
-        <div class="card">
-            <button type="button" name="addPlato" class="btn btn-primary" style="width: 100%;">
-                Adicionar plato
-            </button>
-        </div>
-        <br>
 
+    <div class="col-sm-8">
 
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"></li>
@@ -76,116 +70,126 @@
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#menu0">Corriente</a></li>
             <li><a data-toggle="tab" href="#menu1">Carta</a></li>
-            <li><a data-toggle="tab" href="#menu2">Especiales</a></li>
-            <li><a data-toggle="tab" href="#menu3">Bebidas</a></li>
         </ul>
 
         <div class="tab-content">
             <div id="menu0" class="tab-pane fade in active">
                 <h3>Platos corriente</h3>
-                <div class="col-md-10">
-
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida0" value="8000">
-                        <label class="custom-control-label" for="Comida0" id="LabelComida0">Sopa de arroz con pollo y cilantro - $ 8000 </label>
-                    </div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida1" value="9000">
-                        <label class="custom-control-label" for="Comida1" id="LabelComida1">Bistec encebollado - $ 9.000 </label>
-                    </div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida2" value="9000">
-                        <label class="custom-control-label" for="Comida2" id="LabelComida2">Tamal valluno con hogao - $ 9.000</label>
-                    </div>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" name="p1entrada" class="btn btn-primary">Sopa</button>
+                    <button type="button" name="p1entrada" class="btn btn-primary">Fruta</button>
+                    <button type="button" name="p1entrada" class="btn btn-primary">Huevo</button>
                 </div>
+                <br>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" name="p1principio" class="btn btn-success">Lenteja</button>
+                    <button type="button" name="p1principio" class="btn btn-success">Frijol rojo</button>
+                    <button type="button" name="p1principio" class="btn btn-success">Frijol negro</button>
+                </div>
+                <br>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" name="p1otros" class="btn btn-secondary active">Arroz </button>
+                    <button type="button" name="p1otros" class="btn btn-secondary active">Ensalada </button>
+                    <button type="button" name="p1otros" class="btn btn-secondary active">Platano </button>
+                    <button type="button" name="p1otros" class="btn btn-secondary">Arroz </button>
+                </div>
+
             </div>
 
             <div id="menu1" class="tab-pane fade">
                 <h3>Carta</h3>
-                <p>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida3" value="16500">
-                        <label class="custom-control-label" for="Comida3" id="LabelComida3">Bandeja paisa - $16.500</label>
+                <div class="row">
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato1.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato1">Carne asada y papas francesas</h5>
+                            <p class="card-text">150 gr de carne 3/4 bañada en salsa BBQ.</p>
+                            <button class="btn btn-info c" id="Plato1" value="16500">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato2.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato2">Hamburguesa</h5>
+                            <p class="card-text">Cuenta con 200 gr de carne 3/4  apanada tomates cebollas.</p>
+                            <button class="btn btn-info c" id="Plato2" value="18000">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato3.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato3">Plato 3</h5>
+                            <p class="card-text">Descripcion.</p>
+                            <button class="btn btn-info c" id="Plato3" value="12000">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato4.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato4">Plato 4</h5>
+                            <p class="card-text">Descripcion.</p>
+                            <button class="btn btn-info c" id="Plato4" value="15000">Agregar</button>
+                        </div>
                     </div>
 
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida4" value="12000">
-                        <label class="custom-control-label" for="Comida4" id="LabelComida4">Arroz con pollo $ 12.000</label>
-                    </div>
 
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida5" value="16000">
-                        <label class="custom-control-label" for="Comida5" id="LabelComida5">Carne asada 12 OZ - $ 16.000</label>
-                    </div>
-
-                </p>
-            </div>
-
-            <div id="menu2" class="tab-pane fade">
-                <h3>Especiales</h3>
-                <p>
-
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida6" value="18000">
-                        <label class="custom-control-label" for="Comida6" id="LabelComida6">Fajitas de carne asada - $ 16.000</label>
-                    </div>
-                    <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input c" id="Comida7" value="20000">
-                        <label class="custom-control-label" for="Comida7" id="LabelComida7">Camarrones- $ 20.000</label>
-                    </div>
-                </p>
-            </div>
-
-            <div id="menu3" class="tab-pane fade">
-                <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input c" id="Comida8" value="2000">
-                    <label class="custom-control-label" for="Comida8" id="LabelComida8">Limonada- $ 2.000</label>
                 </div>
+                <div class="row">
 
-                <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input c" id="Comida9" value="2000">
-                    <label class="custom-control-label" for="Comida9" id="LabelComida9">Coca-cola - $ 2.000</label>
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato5.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato5">Langosta</h5>
+                            <p class="card-text">Langosta acompañada de una frigolada.</p>
+                            <button class="btn btn-info c" id="Plato5" value="23000">Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato6.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato6">Comida china</h5>
+                            <p class="card-text">Porcion de arroz chino acompañada de una lumpia.</p>
+                            <button class="btn btn-info c" id="Plato6" value="9000">Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato7.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato7">Cerveza</h5>
+                            <p class="card-text">Un vaso grande de cerveza artesanal</p>
+                            <button class="btn btn-info c" id="Plato7" value="5000">Agregar</button>
+                        </div>
+                    </div>
+
+                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
+                        <img src="~/Imagen/platos/plato8.jpg" class="card-img-top" width="100%">
+                        <div class="card-body">
+                            <h5 class="card-title" id="tPlato8">Limonada</h5>
+                            <p class="card-text">Vaso de limonada</p>
+                            <button class="btn btn-info c" id="Plato8" value="3000">Agregar</button>
+                        </div>
+                    </div>
+
                 </div>
-
             </div>
         </div>
 
-        <div class="row">
-            <button id="btnPlato" class="btn btn-success">Agregar nuevo plato</button>
-        </div>
 
-
-        Validacion de datos
-        no puede inicar con 1 0 o coon  3 telefono
-        max 7 min 7 no deben ser repetidos
-
-
-        Core
 
         <div class="row">
             <h4>Lista de platos</h4>
-            <ul class="list-group" id="listaPlatos"></ul>
-        </div>
-
-
-
-        <div id="clonPlato" style="display:none;">
-            <li class="list-group-item cabecera" data-toggle="collapse" data-target="">
-
-            </li>
-            <div class="collapse panel body">
-                <div class="col-md-10">
-                    <table class="table table-hover">
-                        <thead>
-                        <th>Plato</th>
-                        <th>Valor</th>
-                        </thead>
-                        <tbody id="ContenidoPlato"></tbody>
-                    </table>
-                </div>
+            <div class="col-md-10">
+                <table class="table table-hover">
+                    <thead>
+                    <th>Platos a la carta</th>
+                    <th>Valor</th>
+                    </thead>
+                    <tbody id="ContenidoPlato"></tbody>
+                </table>
             </div>
         </div>
-
 
         <br>
         <div class="card">
