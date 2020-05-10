@@ -1,18 +1,16 @@
-﻿@{
-    ViewBag.Title = "Menu";
-}
-@ViewBag.Message
+﻿@model OrderSoftV0.Models.Menu
 
-<br />
+@{
+    ViewBag.Title = "Menu | OrderSoft ";
+}
 
 <div class="row">
     <div class="col-sm-4">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <b>Mesa: </b>
+                <b>Mesa: </b>@ViewBag.nombre
             </div>
             <div class="panel-body">
-                <!--<div class="input-group mb-3">-->
                 <button name="mesa" type="button" class="btn btn-primary">M1</button>
                 <button name="mesa" type="button" class="btn btn-primary">M2</button>
                 <button name="mesa" type="button" class="btn btn-primary">M3</button>
@@ -21,7 +19,6 @@
                 <button name="mesa" type="button" class="btn btn-primary">M6</button>
                 <button name="mesa" type="button" class="btn btn-primary">M7</button>
                 <button name="mesa" type="button" class="btn btn-primary">M8</button>
-                <!--</div>-->
             </div>
         </div>
         <br>
@@ -195,7 +192,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <button type="button" id="ordenar" class="btn btn-block btn-primary" disabled>Ordenar</button>
-                 </div>
+                </div>
             </div>
         </div>
     </div>
