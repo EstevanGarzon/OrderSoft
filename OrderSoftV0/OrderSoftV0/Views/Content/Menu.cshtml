@@ -1,14 +1,15 @@
-﻿@model OrderSoftV0.Models.Menu
+﻿@model OrderSoftV0.Models.Index
 
 @{
     ViewBag.Title = "Menu | OrderSoft ";
 }
 
 <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-1">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <b>Mesa: </b>@ViewBag.nombre
+                <b>Mesa: </b>@ViewBag.Message
+
             </div>
             <div class="panel-body">
                 <button name="mesa" type="button" class="btn btn-primary">M1</button>
@@ -18,180 +19,159 @@
                 <button name="mesa" type="button" class="btn btn-primary">M5</button>
                 <button name="mesa" type="button" class="btn btn-primary">M6</button>
                 <button name="mesa" type="button" class="btn btn-primary">M7</button>
-                <button name="mesa" type="button" class="btn btn-primary">M8</button>
-            </div>
-        </div>
-        <br>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <center><b>Adicionales</b></center>
-            </div>
-            <div class="panel-body">
-                <input type="text" class="form-control" name="mesa" hidden />
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="tajadas" name="tajadas">
-                    <label class="custom-control-label" for="tajadas">
-                        Tajadas (1)
-                    </label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="papas" name="papas">
-                    <label class="custom-control-label" for="papas">Tajadas</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="maiz" name="maiz">
-                    <label class="custom-control-label" for="maiz">Tajadas</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="fritas" name="fritas">
-                    <label class="custom-control-label" for="fritas">Tajadas</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="albondigas" name="albondigas">
-                    <label class="custom-control-label" for="albondigas">Tajadas</label>
-                </div>
-            </div>
-            <div class="panel-footer">
-                <center>
-                    <button type="button" name="addFactura" class="btn btn-primary">Agregar a factura</button>
-                </center>
+                <button name="mesa" type="button" class="btn btn-primary">M9</button>
             </div>
         </div>
     </div>
-
-    <div class="col-sm-8">
-
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"></li>
-            <li role="presentation" class=""></li>
-            <li role="presentation" class="">Especiales</li>
-        </ul>
+    <div class="col-sm-11">
 
         <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab" href="#menu0">Corriente</a></li>
-            <li><a data-toggle="tab" href="#menu1">Carta</a></li>
+            <li class="active"><a data-toggle="tab" href="#menu0">Carta</a></li>
+            <li><a data-toggle="tab" href="#menu1">Corriente</a></li>
+            <li><a data-toggle="tab" href="#menu2">Bebidas</a></li>
+            <li><a data-toggle="tab" href="#menu3">Adicionales</a></li>
+            <li><a data-toggle="tab" href="#menu4">Otros</a></li>
         </ul>
 
         <div class="tab-content">
             <div id="menu0" class="tab-pane fade in active">
-                <h3>Platos corriente</h3>
-                <div class="btn-group btn-group-sm">
-                    <button type="button" name="p1entrada" class="btn btn-primary">Sopa</button>
-                    <button type="button" name="p1entrada" class="btn btn-primary">Fruta</button>
-                    <button type="button" name="p1entrada" class="btn btn-primary">Huevo</button>
-                </div>
-                <br>
-                <div class="btn-group btn-group-sm">
-                    <button type="button" name="p1principio" class="btn btn-success">Lenteja</button>
-                    <button type="button" name="p1principio" class="btn btn-success">Frijol rojo</button>
-                    <button type="button" name="p1principio" class="btn btn-success">Frijol negro</button>
-                </div>
-                <br>
-                <div class="btn-group btn-group-sm">
-                    <button type="button" name="p1otros" class="btn btn-secondary active">Arroz </button>
-                    <button type="button" name="p1otros" class="btn btn-secondary active">Ensalada </button>
-                    <button type="button" name="p1otros" class="btn btn-secondary active">Platano </button>
-                    <button type="button" name="p1otros" class="btn btn-secondary">Arroz </button>
-                </div>
+                <br />
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body col-md-3 col-sm-3" style="width: 18rem; border: 1px solid #ccc; border-radius: 3px; padding: 5px; margin-left: 6px;">
+                            <img src="~/Imagen/platos/plato1.jpg" class="card-img-top" width="100%">
+                            <div class="card-body">
+                                <h5 class="card-title" id="tPlato1">Carne asada y papas francesas</h5>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" value="0" min="0" readonly />
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" style="padding: 5px;">
+                                                <li><input type="checkbox" value="Tajadas" />Tajadas</li>
+                                                <li><input type="checkbox" value="Tajadas" />Tajadas</li>
+                                                <li><input type="checkbox" value="Tajadas" />Tajadas</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="card">
+                        <div class="card-body col-md-3 col-sm-3" style="width: 18rem; border: 1px solid #ccc; border-radius: 3px; padding: 5px; margin-left: 6px;">
+                            <img src="~/Imagen/platos/plato1.jpg" class="card-img-top" width="100%">
+                            <div class="card-body">
+                                <h5 class="card-title" id="tPlato1">Carne asada y papas francesas</h5>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" readonly />
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-eye-open"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
             </div>
 
             <div id="menu1" class="tab-pane fade">
-                <h3>Carta</h3>
                 <div class="row">
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato1.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato1">Carne asada y papas francesas</h5>
-                            <p class="card-text">150 gr de carne 3/4 bañada en salsa BBQ.</p>
-                            <button class="btn btn-info c" id="Plato1" value="16500">Agregar</button>
+                    <div class="col-sm-12">
+                        <br>
+                        <div class="card">
+                            <button type="button" name="addPlato" class="btn btn-primary" style="width: 100%;">
+                                Adicionar plato
+                            </button>
                         </div>
+                        <br>
+                        <ul class="list-group">
+                            <li class="list-group-item" data-toggle="collapse" data-target="#plato1">Plato 1</li>
+                            <div id="plato1" class="collapse card">
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" name="p1entrada" class="btn btn-outline-primary">Sopa</button>
+                                    <button type="button" name="p1entrada" class="btn btn-outline-primary">Fruta</button>
+                                    <button type="button" name="p1entrada" class="btn btn-outline-primary">Huevo</button>
+                                </div>
+                                <br>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" name="p1principio" class="btn btn-outline-success">Lenteja</button>
+                                    <button type="button" name="p1principio" class="btn btn-outline-success">Frijol rojo</button>
+                                    <button type="button" name="p1principio" class="btn btn-outline-success">Frijol negro</button>
+                                </div>
+                                <br>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" name="p1otros" class="btn btn-outline-secondary active">Arroz </button>
+                                    <button type="button" name="p1otros" class="btn btn-outline-secondary active">Ensalada </button>
+                                    <button type="button" name="p1otros" class="btn btn-outline-secondary active">Platano </button>
+                                    <button type="button" name="p1otros" class="btn btn-outline-secondary">Arroz </button>
+                                </div>
+                            </div>
+                        </ul>
+                        <br>
                     </div>
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato2.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato2">Hamburguesa</h5>
-                            <p class="card-text">Cuenta con 200 gr de carne 3/4  apanada tomates cebollas.</p>
-                            <button class="btn btn-info c" id="Plato2" value="18000">Agregar</button>
-                        </div>
-                    </div>
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato3.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato3">Plato 3</h5>
-                            <p class="card-text">Descripcion.</p>
-                            <button class="btn btn-info c" id="Plato3" value="12000">Agregar</button>
-                        </div>
-                    </div>
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato4.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato4">Plato 4</h5>
-                            <p class="card-text">Descripcion.</p>
-                            <button class="btn btn-info c" id="Plato4" value="15000">Agregar</button>
-                        </div>
-                    </div>
-
-
                 </div>
+            </div>
+
+            <div id="menu2" class="tab-pane fade">
+                <br />
                 <div class="row">
-
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato5.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato5">Langosta</h5>
-                            <p class="card-text">Langosta acompañada de una frigolada.</p>
-                            <button class="btn btn-info c" id="Plato5" value="23000">Agregar</button>
-                        </div>
-                    </div>
-
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato6.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato6">Comida china</h5>
-                            <p class="card-text">Porcion de arroz chino acompañada de una lumpia.</p>
-                            <button class="btn btn-info c" id="Plato6" value="9000">Agregar</button>
-                        </div>
-                    </div>
-
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato7.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato7">Cerveza</h5>
-                            <p class="card-text">Un vaso grande de cerveza artesanal</p>
-                            <button class="btn btn-info c" id="Plato7" value="5000">Agregar</button>
-                        </div>
-                    </div>
-
-                    <div class="card col-md-3 col-sm-3" style="width: 18rem;">
-                        <img src="~/Imagen/platos/plato8.jpg" class="card-img-top" width="100%">
-                        <div class="card-body">
-                            <h5 class="card-title" id="tPlato8">Limonada</h5>
-                            <p class="card-text">Vaso de limonada</p>
-                            <button class="btn btn-info c" id="Plato8" value="3000">Agregar</button>
+                    <div class="card">
+                        <div class="card-body col-md-3 col-sm-3" style="width: 18rem; border: 1px solid #ccc; border-radius: 3px; padding: 5px; margin-left: 6px;">
+                            <img src="~/Imagen/platos/plato1.jpg" class="card-img-top" width="100%">
+                            <div class="card-body">
+                                <h5 class="card-title" id="tPlato1">Coca-Cola 250ml</h5>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" value="0" min="0" readonly />
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                 </div>
+                <br />
+            </div>
+
+            <div id="menu3" class="tab-pane fade">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input c" id="Comida8" value="2000">
+                    <label class="custom-control-label" for="Comida8" id="LabelComida8">Limonada- $ 2.000</label>
+                </div>
+
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input c" id="Comida9" value="2000">
+                    <label class="custom-control-label" for="Comida9" id="LabelComida9">Coca-cola - $ 2.000</label>
+                </div>
+
             </div>
         </div>
 
-
-
-        <div class="row">
-            <h4>Lista de platos</h4>
-            <div class="col-md-10">
-                <table class="table table-hover">
-                    <thead>
-                    <th>Platos a la carta</th>
-                    <th>Valor</th>
-                    </thead>
-                    <tbody id="ContenidoPlato"></tbody>
-                </table>
-            </div>
-        </div>
-
-        <br>
         <div class="card">
             <div class="row">
                 <div class="col-sm-6">
